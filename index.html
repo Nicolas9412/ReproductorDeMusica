@@ -4,9 +4,260 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Reproductor de música</title>
+    <!-- Logo del reproductor de música -->
+    <link rel="shortcut icon" href="./imagenes/Logo-reproductor.ico" type="image/x-icon">
+    <!-- Conexión con Bootstrap -->
+    <link rel="stylesheet" href="./node_modules/bootstrap/dist/css/bootstrap.css">
+    <!-- normalize -->
+    <link rel="stylesheet" href="./estilos/normalize.css">
+    <!-- mis estilos -->
+    <link rel="stylesheet" href="./estilos/mis-estilos.css">
+    <!-- Conexión bootstrap iconos -->
+    <link rel="stylesheet" href="./node_modules/bootstrap-icons/font/bootstrap-icons.css">
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <!-- Noto Serif Display -->
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+Display:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
 </head>
-<body>
-    
+<body class="grid-index-area">
+    <header class="grid-header-item header__index">
+        <a class="titulo__chill-music" href="">
+            <div class="logo__container">
+                <img src="./imagenes/logo_reproductor.png" alt="logo chill music">
+            </div>
+            <span>Chill Music</span>
+        </a>
+        <nav>
+            <ul class="menu">
+                <li><i class="bi bi-house"></i><a href=""></i>Inicio</a></li>
+                <li><a href=""><i class="bi bi-search"></i>Buscar</a></li>
+                <li><a href=""><i class="bi bi-x-diamond"></i>Tu biblioteca</a></li>
+                <li><a href=""><i class="bi bi-plus-square-fill"></i>Crear playlist</a></li>
+                <li>
+                    <a href=""><i class="bi bi-heart-fill"></i>Canciones que te gustaron</a>
+                    <hr class="menu__divisor" >
+                </li>
+                
+                <li><a href="">Favoritas de la radio</a></li>
+                <li><a href=""><i class="bi bi-download"></i>Instalar app</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main class="grid-main-item main__index">
+        <section class="main__portada">
+            <div class="portada__img">
+                <img src="./imagenes/qlokura.png" alt="">
+            </div>
+            <div class="portada__text">
+                <h1 class="titulo__portada"> Q´Lokura</h1>
+                <p class="descripcion__portada">El verdadero cuarteto cordobés</p>
+                <p class="duracion__portada">5 canciones, 31 min</p>
+            </div>
+        </section>
+        <section class="flex-btn">
+            <button class="btn__play"><i class="bi bi-play-fill"></i></button>
+            <button class="btn__like"><i class="bi bi-heart"></i></button>
+            <div class="dropdown">
+                <button class="btn" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
+                  <img src="./imagenes/more.png" alt="mas opciones">
+                </button>
+                <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+                  <li><a class="dropdown-item" href="#">Action</a></li>
+                  <li><a class="dropdown-item" href="#">Another action</a></li>
+                  <li><a class="dropdown-item" href="#">Something else here</a></li>
+                </ul>
+              </div>
+        </section>
+        <section class="tablaCanciones">
+            <table class="table table-dark table-hover">
+                <thead>
+                <tr>
+                    <th scope="col">#</th>
+                    <th scope="col">TÍTULO</th>
+                    <th scope="col">ÁLBUM</th>
+                    <th scope="col">FECHA DE INCORPORACIÓN</th>
+                    <th scope="col"><i class="bi bi-clock"></i></th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr>
+                    <th scope="row">1</th>
+                    <td>
+                        <div class="titulo-container">
+                            <div class="titulo-img">
+                                <img src="./imagenes/mala_conducta.png" alt="logo de titulo"> 
+                            </div>
+                            <div class="titulo-nombre-container">
+                                <div class="titulo-flex"> 
+                                    <p class="titulo-cancion">Mala Conducta</p> 
+                                    <p class="cantante-cancion">Q´Lokura</p> 
+                                </div>
+                            </div>
+                        </div>
+                    </td>
+                    <td>Mala Conducta</td>
+                    <td>2019</td>
+                    <td>0:50</td>
+                </tr>
+                <tr>
+                    <th scope="row">2</th>
+                    <td>
+                        <div class="titulo-container">
+                            <div class="titulo-img">
+                                <img src="./imagenes/mala_conducta.png" alt="logo de titulo"> 
+                            </div>
+                            <div class="titulo-nombre-container">
+                                <div class="titulo-flex"> 
+                                    <p class="titulo-cancion">Nos volvemos a caer</p> 
+                                    <p class="cantante-cancion">Q´Lokura</p> 
+                                </div>
+                            </div>
+                        </div>
+                    </td>
+                    <td>Mala Conducta</td>
+                    <td>2019</td>
+                    <td>3:16</td>
+                </tr>
+                <tr>
+                    <th scope="row">3</th>
+                    <td>
+                            <div class="titulo-container">
+                                <div class="titulo-img">
+                                    <img src="./imagenes/mala_conducta.png" alt="logo de titulo"> 
+                                </div>
+                                <div class="titulo-nombre-container">
+                                    <div class="titulo-flex"> 
+                                        <p class="titulo-cancion">Y ahora vienes a mi</p> 
+                                        <p class="cantante-cancion">Q´Lokura</p> 
+                                    </div>
+                                </div>
+                            </div>
+                    </td>
+                    <td>Mala Conducta</td>
+                    <td>2019</td>
+                    <td>3:25</td>
+                </tr>
+                <tr>
+                    <th scope="row">4</th>
+                    <td>
+                            <div class="titulo-container">
+                                <div class="titulo-img">
+                                    <img src="./imagenes/animate.png" alt="logo de titulo"> 
+                                </div>
+                                <div class="titulo-nombre-container">
+                                    <div class="titulo-flex"> 
+                                        <p class="titulo-cancion"> Amor de su cama</p> 
+                                        <p class="cantante-cancion">Q´Lokura</p> 
+                                    </div>
+                                </div>
+                            </div>
+                    </td>
+                    <td>Animate</td>
+                    <td>2018</td>
+                    <td>2:53</td>
+                </tr>
+                <tr>
+                    <th scope="row">5</th>
+                    <td>
+                            <div class="titulo-container">
+                                <div class="titulo-img">
+                                    <img src="./imagenes/animate.png" alt="logo de titulo"> 
+                                </div>
+                                <div class="titulo-nombre-container">
+                                    <div class="titulo-flex"> 
+                                        <p class="titulo-cancion"> Me duele tu nombre </p>
+                                        <p class="cantante-cancion">Q´Lokura</p> 
+                                    </div>
+                                </div>
+                            </div>
+                    </td>
+                    <td>Animate</td>
+                    <td>2018</td>
+                    <td>4:02</td>
+                </tr>
+                <tr>
+                    <th scope="row">6</th>
+                    <td>
+                            <div class="titulo-container">
+                                <div class="titulo-img">
+                                    <img src="./imagenes/animate.png" alt="logo de titulo"> 
+                                </div>
+                                <div class="titulo-nombre-container">
+                                    <div class="titulo-flex"> 
+                                        <p class="titulo-cancion"> Maldita mentirosa </p>
+                                        <p class="cantante-cancion">Q´Lokura</p> 
+                                    </div>
+                                </div>
+                            </div>
+                    </td>
+                    <td>Animate</td>
+                    <td>2018</td>
+                    <td>3:26</td>
+                </tr>
+                </tbody>
+            </table>
+        </section>
+        <footer class="grid-footer-item grid-footer">
+            <div class="flex-menu-1">
+                <ul>
+                    <li> <h2 class="menu-1-titulos">COMPAÑÍA</h2> </li>
+                    <li> <a href="">Acerca de</a> </li>
+                    <li> <a href="">Empleo</a> </li>
+                    <li> <a href="">For the record</a> </li>
+                </ul>
+                <ul>
+                    <li> <h2 class="menu-1-titulos">COMUNIDADES</h2> </li>
+                    <li> <a href="">Para artistas</a> </li>
+                    <li> <a href="">Desarrolladores</a> </li>
+                    <li> <a href="">Publicidad</a> </li>
+                    <li> <a href="">Inversionistas</a> </li>
+                    <li> <a href="">Proveedores</a> </li>
+                </ul>
+                <ul>
+                    <li> <h2 class="menu-1-titulos">ENLACES ÚTILES</h2> </li>
+                    <li> <a href="">Ayuda</a> </li>
+                    <li> <a href="">App móvil gratis</a> </li>
+                </ul>
+            </div>
+            <div class="flex-contactos">
+                <div class="instagram">
+                    <i class="bi bi-instagram"></i>
+                </div>
+                <div class="twitter">
+                    <i class="bi bi-twitter"></i>
+                </div>
+                <div class="facebook">
+                    <i class="bi bi-facebook"></i>
+                </div>
+            </div>
+            <div class="flex-menu-2">
+                <ul class="flex-menu-2__ul">
+                    <li> <a href="">Legal</a> </li>
+                    <li> <a href="">Centro de privacidad</a> </li>
+                    <li> <a href="">Política de Privacidad</a> </li>
+                    <li> <a href="">Cookies</a> </li>
+                    <li> <a href="">Sobre los anuncios</a> </li>
+                </ul>
+            </div>
+            <div>
+                <span class="copyright">@ 2022 Chill Music AB</span>
+            </div>
+        </footer>
+    </main>
+    <div class="grid-reproductor-item">
+        <audio src=""></audio>
+    </div>
+    <!-- Conexion de jquery -->
+    <script src="./node_modules/jquery/dist/jquery.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.min.js" integrity="sha384-QJHtvGhmr9XOIpI6YVutG+2QOK9T+ZnN4kzFN1RtK3zEFEIsxhlmWl5/YESvpZ13" crossorigin="anonymous"></script>
+    <!-- Conexión de popper -->
+    <script src="./node_modules/popper.js/dist/umd/popper.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js" integrity="sha384-7+zCNj/IqJ95wo16oMtfsKbZ9ccEh31eOz1HGyDuCQ6wgnyJNSYdrPa03rtR1zdB" crossorigin="anonymous"></script>
+    <!-- Conexión js de bootstrap -->
+    <script src="./node_modules/bootstrap/dist/js/bootstrap.bundle.js"></script>
+    <script src="./node_modules/bootstrap/dist/js/bootstrap.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
 </body>
 </html>

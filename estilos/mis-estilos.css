@@ -1,0 +1,337 @@
+ul{
+    list-style: none;
+}
+a{
+    text-decoration: none;
+}
+
+/*** GRID LAYOUT ***/
+
+.grid-index-area{
+    display: grid;
+    grid-template-areas: 
+    "header main"
+    "reproductor reproductor";
+    grid-template-rows: auto auto;
+    grid-template-columns: 20vw 80vw;
+    overflow-x: hidden;
+}
+
+.grid-header-item{
+    grid-area: header;
+}
+
+.grid-main-item{
+    grid-area: main;
+}
+
+.grid-footer-item{
+    grid-area: footer;
+}
+
+.grid-reproductor-item{
+    grid-area: reproductor;
+}
+
+.header__index{
+    background-color: #000;
+    font-family: 'Noto Serif Display', serif;
+    position: fixed;
+    width: 20vw;
+}
+
+.titulo__chill-music{
+    height: 13vh;
+    margin-top: 10px;
+    margin-left: 20px;
+    display: flex;
+    justify-content: space-between;
+    text-decoration: none;
+    color: #FFF;
+    font-size: 28px;
+    text-transform: uppercase;
+}
+
+.titulo__chill-music span{
+    align-self: center;
+    margin-right: 7%;
+}
+
+.logo__container{
+    display: inline-block;
+    width: fit-content;
+    background-color:  #FFF;
+    padding: 5px;
+    border-radius: 50%;
+}
+
+.menu{
+    height: calc(100vh - 13vh);
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    margin-top: 5vh;
+
+}
+
+.menu li{
+    list-style: none;
+    display: block;
+    color: #FFF;
+    font-size: 20px;
+    margin-top: 2vh;
+}
+
+.menu li a{
+    text-decoration: none;
+    color: #FFF;
+}
+
+.bi-house, .bi-search, 
+.bi-x-diamond, .bi-plus-square-fill, 
+.bi-heart-fill, .bi-download{
+    margin-right: 10px;
+} 
+
+.menu__divisor{
+    background-color: #FFF;
+    width: 100%;
+    size: 10vh; /* ¿? */
+}
+
+.menu li:nth-child(5){
+    width: fit-content;
+}
+
+.menu li:nth-child(6){
+    margin-top: 2vh;
+}
+
+.menu li:nth-child(7){
+    position: absolute;
+    top:84%;
+}
+
+.main__index{
+    background: rgb(25,25,25);
+    background: linear-gradient(to top, rgba(25,25,25,1) 30%, rgba(145,36,36,1) 75%);
+    color: #FFF;
+}
+
+.main__portada{
+    width: 100%;
+    height: 300px;
+    display: flex;
+    margin-top: 5vh;
+    margin-left: 5vw;
+}
+
+.portada__img{
+    width: fit-content;
+    display:  inline-block;
+    box-shadow: 0px 4px 50px 22px rgba(0,0,0,0.9);
+    -webkit-box-shadow: 0px 4px 50px 22px rgba(0,0,0,0.9);
+    -moz-box-shadow: 0px 4px 50px 22px rgba(0,0,0,0.9);
+}
+
+.portada__text{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-left: 5vw;
+}
+
+.titulo__portada{
+    font-size: 96px;
+    font-weight: 900;
+    margin: 0;
+}
+
+.descripcion__portada{
+    font-size: 24px;
+    font-weight: 500;
+    margin: 0;
+    line-height: 50px;
+    
+}
+
+.duracion__portada{
+    font-size:  20px;
+    font-weight: 400;
+    margin:0;
+    line-height: 50px;
+}
+
+.btn__play{
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+    background-color: #3aa419;
+    border: none
+}
+
+.btn__play .bi-play-fill{
+    font-size: 40px;
+    line-height: 50px;
+}
+
+.btn__like{
+    background-color: transparent;
+    border: none;
+}
+
+.btn__like .bi-heart{
+    font-size: 50px;
+    color: #FFF;
+    line-height: 50px;
+}
+
+.dropdown{
+    display: inline-block;
+}
+
+.flex-btn{
+    display: flex;
+    width: 20%;
+    justify-content: space-evenly;
+    margin-top: 5vh;
+    margin-left: 3vw;
+}
+
+.tablaCanciones{
+    width: 90%;
+    margin: auto;
+    margin-top: 5vh;
+}
+
+.table-dark {
+    --bs-table-bg: transparent;
+    --bs-table-striped-bg: #2c3034;
+    --bs-table-striped-color: #fff;
+    --bs-table-active-bg: #373b3e;
+    --bs-table-active-color: #fff;
+    --bs-table-hover-bg: #323539;
+    --bs-table-hover-color: #fff;
+    color: #fff;
+    border-color: #373b3e;
+  }
+
+.small{
+    position: relative;
+}
+
+.titulo-cancion{
+    display: inline-block;
+    line-height: 0;
+}
+
+.cantante-cancion{
+    line-height: 0;
+    font-size: 12px;
+    color: #c9c9c9
+}
+
+.titulo-nombre-container{
+    display: inline-block;
+    margin-left: 0.5vw;
+}
+
+.titulo-flex{
+    height: 40px;
+    display: flex;
+    flex-direction: column;
+    justify-content: end;
+}
+
+.titulo-container{
+    display: flex;
+}
+
+.grid-footer{
+    display: grid;
+    grid-template-columns: 50% 45%;
+    grid-template-rows: auto auto;
+    margin-top: 5vh;
+}
+
+.flex-menu-1{
+    display: flex;
+    justify-content: space-around;
+    height: 300px;
+}
+
+.flex-contactos{
+    display: flex;
+    justify-content: end;
+    font-size: 36px;
+    margin-top: 2vh;
+}
+
+.flex-contactos div{
+    width: 65px;
+    height: 65px;
+    background-color: #2c3034; 
+    margin-right: 10px;
+    border-radius: 50%;
+}
+
+.instagram, .twitter, .facebook{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #FFF;
+    transition: all 1s;
+}
+
+.instagram:hover, .twitter:hover, .facebook:hover{
+    color: #de4c8a;
+}
+
+.menu-1-titulos{
+    font-size: 20px;
+}
+
+.flex-menu-1 ul li a{
+    color: #fff;
+    font-size: 18px;
+    transition: all 1s;
+}
+
+.flex-menu-1 ul li a:hover{
+    color: #de4c8a;
+}
+
+.flex-menu-1 ul li{
+    margin-top: 2vh;
+}
+
+.flex-menu-2{
+    width: 100%;
+    margin-left: 0.8vw;
+}
+
+.flex-menu-2 ul li{
+    display: inline-block;
+}
+
+.flex-menu-2__ul{
+    display: flex;
+    justify-content: space-around;
+}
+
+.flex-menu-2 ul li a{
+    color: #FFF;
+    font-size: 16px;
+    transition: all 1s;
+}
+
+.flex-menu-2 ul li a:hover{
+    color: #de4c8a;
+}
+
+.copyright{
+    float: right;
+    font-size: 18px;
+}
+
+
