@@ -5,9 +5,23 @@ a{
     text-decoration: none;
 }
 
+
+
+
+@media only screen and (min-width: 1024px){
+    
 /*** GRID LAYOUT ***/
 
 .grid-index-area{
+    display: grid;
+    grid-template-areas: 
+    "header main";
+    grid-template-rows: auto;
+    grid-template-columns: 20vw 80vw;
+    overflow-x: hidden;
+}
+
+.grid-index2-area{
     display: grid;
     grid-template-areas: 
     "header main"
@@ -33,15 +47,21 @@ a{
     grid-area: reproductor;
 }
 
+/*** INDEXA ***/
+
+.header__mobile{
+    display: none;
+}
+
 .header__index{
     background-color: #000;
     font-family: 'Noto Serif Display', serif;
     position: fixed;
     width: 20vw;
+    border-right: 1px solid #FFF;
 }
 
 .titulo__chill-music{
-    height: 13vh;
     margin-top: 10px;
     margin-left: 20px;
     display: flex;
@@ -52,17 +72,31 @@ a{
     text-transform: uppercase;
 }
 
+.titulo__chill-music:hover{
+    color: #FFF;
+}
+
 .titulo__chill-music span{
     align-self: center;
     margin-right: 7%;
 }
 
+.container__logo{
+    width: 100%;
+}
+
 .logo__container{
-    display: inline-block;
-    width: fit-content;
-    background-color:  #FFF;
-    padding: 5px;
+    min-width: 80px;
+    min-height: 80px;
+    width:5vw;
+    height: 10vh;
     border-radius: 50%;
+    display: inline-block;
+    background-color:  #FFF;
+    background-image: url(../imagenes/logo_reproductor.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
 }
 
 .menu{
@@ -142,7 +176,7 @@ a{
 }
 
 .titulo__portada{
-    font-size: 96px;
+    font-size: 88px;
     font-weight: 900;
     margin: 0;
 }
@@ -180,6 +214,11 @@ a{
     border: none;
 }
 
+.heart-album{
+    position: relative;
+    bottom: 15px;
+}
+
 .btn__like .bi-heart{
     font-size: 50px;
     color: #FFF;
@@ -210,7 +249,7 @@ a{
     --bs-table-striped-color: #fff;
     --bs-table-active-bg: #373b3e;
     --bs-table-active-color: #fff;
-    --bs-table-hover-bg: #323539;
+    --bs-table-hover-bg: rgba(255,255,255,0.1);
     --bs-table-hover-color: #fff;
     color: #fff;
     border-color: #373b3e;
@@ -249,9 +288,10 @@ a{
 
 .grid-footer{
     display: grid;
-    grid-template-columns: 50% 45%;
+    grid-template-columns: 72% 23%;
     grid-template-rows: auto auto;
     margin-top: 5vh;
+    margin-bottom: 13vh;
 }
 
 .flex-menu-1{
@@ -308,6 +348,7 @@ a{
 .flex-menu-2{
     width: 100%;
     margin-left: 0.8vw;
+    margin-top: 3vh;
 }
 
 .flex-menu-2 ul li{
@@ -332,6 +373,1135 @@ a{
 .copyright{
     float: right;
     font-size: 18px;
+    margin-top: 3vh;
+}
+
+/*** MALA CONDUCTA ***/
+
+.grid-reproductor-item{
+    position: absolute;
+    top: calc(100vh - 100px);
+}
+.grid-reproductor{
+    position: fixed;
+    width: 100%;
+    height: 100px;
+    background-color: rgba(25,25,25,1);
+    border-top: 1px solid #FFF;
+}
+
+.barra-reproduccion{
+    display: flex;
+    justify-content: center;
+
+}
+
+.cancion-reproduccion{
+    margin-left: calc(48vw - 300px);
+    align-self: center;
+    margin-bottom: 20px;
+}
+
+.instalar-app{
+    position: absolute;
+    top:75% !important;
+}
+
+.titulo-reproduccion{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    margin-left: 2vw;
+    margin-top: 1vh;
+}
+
+.titulo-img-reproduccion{
+    height: 70px;
+    margin-top: 22px;
+}
+
+.titulo-cancion-reproduccion{
+    height: 50px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-self: center;
+    margin-left: 10px;
+}
+
+.titulo-nombre-reproduccion{
+    color: #FFF;
+    font-size: 16px;
+    display: inline-block;
+    line-height: 0px;
+}
+
+.titulo-cantante-reproduccion{
+    color: #FFF;
+    font-size: 12px;
+    display: inline-block;
+    line-height: 0px;
+}
+
+.btn-fav{
+    display: flex;
+    margin-bottom: 20px;
+    margin-left: 10px;
+}
+
+/*** HEART ***/
+
+[id="heart1"] {
+    position: absolute;
+    left: -100vw;
+}
+  
+[for="heart1"] {
+    color: #FFF;
+    cursor: pointer;
+    font-size: 5em;
+    align-self: center;  
+    transition: color 0.2s ease-in-out;
+}
+  
+[for="heart1"]:hover {
+    color: grey ;
+}
+  
+[for="heart1"]::selection {
+    color: none;
+    background: transparent;
+}
+  
+[for="heart1"]::moz-selection {
+    color: none;
+    background: transparent;
+}
+  
+
+[id="heart1"]:checked + label {
+    color: rgb(0, 204, 255);
+    will-change: font-size;
+    animation: heart 1s cubic-bezier(.17, .89, .32, 1.49);
+}
+
+[id="heart2"] {
+    position: absolute;
+    left: -100vw;
+}
+  
+[for="heart2"] {
+    color: #FFF;
+    cursor: pointer;
+    font-size: 3em;
+    align-self: center;  
+    transition: color 0.2s ease-in-out;
+}
+  
+[for="heart2"]:hover {
+    color: grey ;
+}
+  
+[for="heart2"]::selection {
+    color: none;
+    background: transparent;
+}
+  
+[for="heart2"]::moz-selection {
+    color: none;
+    background: transparent;
+}
+
+[id="heart2"]:checked + label {
+    color: #e2264d;
+    will-change: font-size;
+    animation: heart 1s cubic-bezier(.17, .89, .32, 1.49);
+}
+
+@keyframes heart {0%, 17.5% {font-size: 0;}}
+  
+}  
+
+@media (min-width:601px) and (max-width:1023px) {
+    
+    .grid-index-area{
+        display: grid;
+        grid-template-areas: 
+        "header" 
+        "main";
+        grid-template-rows: auto;
+        grid-template-columns: 100vw;
+        overflow-x: hidden;
+    }
+    
+    .grid-index2-area{
+        display: grid;
+        grid-template-areas: 
+        "header"
+        "main"
+        "reproductor";
+        grid-template-rows: auto auto auto;
+        grid-template-columns: 100vw;
+        overflow-x: hidden;
+    }
+
+    .grid-header-item{
+        grid-area: header;
+    }
+    
+    .grid-main-item{
+        grid-area: main;
+    }
+    
+    .grid-footer-item{
+        grid-area: footer;
+    }
+    
+    .grid-reproductor-item{
+        grid-area: reproductor;
+    }
+    
+    /*** INDEX ***/
+    
+    .nav-item{
+        font-size: 20px;
+        margin-top: 10px;
+    }
+
+    .nav-item a{
+        color: #FFF;
+    }
+
+    .nav-item .bi{
+        margin-right: 10px;
+    }
+    
+
+    .titulo__chill-music{
+        margin-top: 10px;
+        margin-left: 20px;
+        display: flex;
+        justify-content: space-between;
+        text-decoration: none;
+        color: #FFF;
+        font-size: 28px;
+        text-transform: uppercase;
+    }
+
+    .titulo__chill-music:hover{
+        color: #FFF;
+    }
+    
+    .titulo__chill-music span{
+        align-self: center;
+        margin-left: 7%;
+    }
+    
+    .container__logo{
+        width: 100%;
+    }
+    
+    .logo__container{
+        min-width: 80px;
+        min-height: 80px;
+        width:5vw;
+        height: 10vh;
+        border-radius: 50%;
+        display: inline-block;
+        background-color:  #FFF;
+        background-image: url(../imagenes/logo_reproductor.png);
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: contain;
+    }
+    
+    .header_desktop{
+        display: none;
+    }
+
+    .main__index{
+        background: rgb(25,25,25);
+        background: linear-gradient(to top, rgba(25,25,25,1) 30%, rgba(145,36,36,1) 75%);
+        color: #FFF;
+    }
+    
+    .main__portada{
+        width: 100%;
+        height: 300px;
+        display: flex;
+        margin-top: 5vh;
+        margin-left: 5vw;
+    }
+    
+    .portada__img{
+        width: fit-content;
+        display:  inline-block;
+        box-shadow: 0px 4px 50px 22px rgba(0,0,0,0.9);
+        -webkit-box-shadow: 0px 4px 50px 22px rgba(0,0,0,0.9);
+        -moz-box-shadow: 0px 4px 50px 22px rgba(0,0,0,0.9);
+    }
+    
+    .portada__text{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        margin-left: 5vw;
+    }
+    
+    .titulo__portada{
+        font-size: 3em;
+        font-weight: 900;
+        margin: 0;
+    }
+    
+    .descripcion__portada{
+        font-size: 1em;
+        font-weight: 500;
+        margin: 0;
+        line-height: 50px;
+        
+    }
+    
+    .duracion__portada{
+        font-size:  1em;
+        font-weight: 400;
+        margin:0;
+        line-height: 50px;
+    }
+    
+    .btn__play{
+        width: 70px;
+        height: 70px;
+        border-radius: 50%;
+        background-color: #3aa419;
+        border: none
+    }
+    
+    .btn__play .bi-play-fill{
+        font-size: 40px;
+        line-height: 50px;
+    }
+    
+    .btn__like{
+        background-color: transparent;
+        border: none;
+    }
+    
+    .heart-album{
+        position: relative;
+        bottom: 15px;
+    }
+    
+    .btn__like .bi-heart{
+        font-size: 50px;
+        color: #FFF;
+        line-height: 50px;
+    }
+    
+    .dropdown{
+        display: inline-block;
+    }
+    
+    .flex-btn{
+        display: flex;
+        width: 20%;
+        justify-content: space-evenly;
+        margin-top: 5vh;
+        margin-left: 11vw;
+    }
+    
+    .tablaCanciones{
+        width: 90%;
+        margin: auto;
+        margin-top: 5vh;
+    }
+    
+    .table-dark {
+        --bs-table-bg: transparent;
+        --bs-table-striped-bg: #2c3034;
+        --bs-table-striped-color: #fff;
+        --bs-table-active-bg: #373b3e;
+        --bs-table-active-color: #fff;
+        --bs-table-hover-bg: rgba(255,255,255,0.1);
+        --bs-table-hover-color: #fff;
+        color: #fff;
+        border-color: #373b3e;
+      }
+    
+    .small{
+        position: relative;
+    }
+    
+    .titulo-cancion{
+        display: inline-block;
+        line-height: 0;
+    }
+    
+    .cantante-cancion{
+        line-height: 0;
+        font-size: 12px;
+        color: #c9c9c9
+    }
+    
+    .titulo-nombre-container{
+        display: inline-block;
+        margin-left: 0.5vw;
+    }
+    
+    .titulo-flex{
+        height: 40px;
+        display: flex;
+        flex-direction: column;
+        justify-content: end;
+    }
+    
+    .titulo-container{
+        display: flex;
+    }
+
+    #col-fecha{
+        display: none;
+    }
+    .col-fecha{
+        display: none;
+    }
+    
+    .grid-footer{
+        display: grid;
+        grid-template-columns: 72% 23%;
+        grid-template-rows: auto auto;
+        margin-top: 5vh;
+        margin-bottom: 13vh;
+    }
+    
+    .flex-menu-1{
+        display: flex;
+        justify-content: space-around;
+        height: 300px;
+    }
+    
+    .flex-contactos{
+        display: flex;
+        flex-direction: column;
+        font-size: 36px;
+        margin-top: 2vh;
+        position: relative;
+        left: 50px;
+        bottom: 20px;
+    }
+    
+    .flex-contactos div{
+        width: 65px;
+        height: 65px;
+        background-color: #2c3034; 
+        margin-right: 10px;
+        border-radius: 50%;
+    }
+    
+    .instagram, .twitter, .facebook{
+        min-width: 65px;
+        min-height: 65px;
+        margin-top: 20px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        color: #FFF;
+        transition: all 1s;
+    }
+    
+    .instagram:hover, .twitter:hover, .facebook:hover{
+        color: #de4c8a;
+    }
+    
+    .menu-1-titulos{
+        font-size: 1em;
+    }
+    
+    .flex-menu-1 ul li a{
+        color: #fff;
+        font-size: 1em;
+        transition: all 1s;
+    }
+    
+    .flex-menu-1 ul li a:hover{
+        color: #de4c8a;
+    }
+    
+    .flex-menu-1 ul li{
+        margin-top: 2vh;
+    }
+    
+    .flex-menu-2{
+        width: 100%;
+        margin-left: 0.8vw;
+    }
+    
+    .flex-menu-2 ul li{
+        display: inline-block;
+        margin-top: 10px;
+    }
+    
+    .flex-menu-2__ul{
+        display: flex;
+        flex-direction: column;
+        margin-left: 3vw;
+        justify-content: space-around;
+    }
+    
+    .flex-menu-2 ul li a{
+        color: #FFF;
+        font-size: 16px;
+        transition: all 1s;
+    }
+    
+    .flex-menu-2 ul li a:hover{
+        color: #de4c8a;
+    }
+    
+    .copyright{
+        position: relative;
+        top: 80%;
+        font-size: 18px;
+        margin-top: 3vh;
+    }
+    
+    /*** MALA CONDUCTA ***/
+    
+    .grid-reproductor-item{
+        position: absolute;
+        top: calc(100vh - 100px);
+    }
+    .grid-reproductor{
+        position: fixed;
+        width: 100%;
+        height: 100px;
+        background-color: rgba(25,25,25,1);
+        border-top: 1px solid #FFF;
+    }
+    
+    .barra-reproduccion{
+        display: flex;
+        justify-content: center;
+        margin-left: 6vw;
+    }
+    
+    .cancion-reproduccion{
+        margin-left: calc(48vw - 300px);
+        align-self: center;
+        margin-bottom: 20px;
+    }
+    
+    .instalar-app{
+        position: absolute;
+        top:75% !important;
+    }
+    
+    .titulo-reproduccion{
+        width: 100%;
+        height: 100%;
+        display: flex;
+        margin-left: 2vw;
+        margin-top: 1vh;
+    }
+    
+    .titulo-img-reproduccion{
+        height: 70px;
+        margin-top: 22px;
+    }
+    
+    .titulo-cancion-reproduccion{
+        height: 50px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+        align-self: center;
+        margin-left: 10px;
+    }
+    
+    .titulo-nombre-reproduccion{
+        color: #FFF;
+        font-size: 16px;
+        display: inline-block;
+        line-height: 0px;
+    }
+    
+    .titulo-cantante-reproduccion{
+        color: #FFF;
+        font-size: 12px;
+        display: inline-block;
+        line-height: 0px;
+    }
+    
+    .btn-fav{
+        display: flex;
+        margin-bottom: 20px;
+        margin-left: 15px;
+    }
+    
+    /*** HEART ***/
+    
+    [id="heart1"] {
+        position: absolute;
+        left: -100vw;
+    }
+      
+    [for="heart1"] {
+        color: #FFF;
+        cursor: pointer;
+        font-size: 5em;
+        align-self: center;  
+        transition: color 0.2s ease-in-out;
+    }
+      
+    [for="heart1"]:hover {
+        color: grey ;
+    }
+      
+    [for="heart1"]::selection {
+        color: none;
+        background: transparent;
+    }
+      
+    [for="heart1"]::moz-selection {
+        color: none;
+        background: transparent;
+    }
+      
+    
+    [id="heart1"]:checked + label {
+        color: rgb(0, 204, 255);
+        will-change: font-size;
+        animation: heart 1s cubic-bezier(.17, .89, .32, 1.49);
+    }
+    
+    [id="heart2"] {
+        position: absolute;
+        left: -100vw;
+    }
+      
+    [for="heart2"] {
+        color: #FFF;
+        cursor: pointer;
+        font-size: 3em;
+        align-self: center;  
+        transition: color 0.2s ease-in-out;
+    }
+      
+    [for="heart2"]:hover {
+        color: grey ;
+    }
+      
+    [for="heart2"]::selection {
+        color: none;
+        background: transparent;
+    }
+      
+    [for="heart2"]::moz-selection {
+        color: none;
+        background: transparent;
+    }
+    
+    [id="heart2"]:checked + label {
+        color: #e2264d;
+        will-change: font-size;
+        animation: heart 1s cubic-bezier(.17, .89, .32, 1.49);
+    }
+    
+    @keyframes heart {0%, 17.5% {font-size: 0;}}
+      
 }
 
 
+@media (max-width:600px){
+    .grid-index-area{
+        display: grid;
+        grid-template-areas: 
+        "header" 
+        "main";
+        grid-template-rows: auto;
+        grid-template-columns: 100vw;
+        overflow-x: hidden;
+    }
+    
+    .grid-index2-area{
+        display: grid;
+        grid-template-areas: 
+        "header"
+        "main"
+        "reproductor";
+        grid-template-rows: auto auto auto;
+        grid-template-columns: 100vw;
+        overflow-x: hidden;
+    }
+
+    .grid-header-item{
+        grid-area: header;
+    }
+    
+    .grid-main-item{
+        grid-area: main;
+    }
+    
+    .grid-footer-item{
+        grid-area: footer;
+    }
+    
+    .grid-reproductor-item{
+        grid-area: reproductor;
+    }
+    
+    /*** INDEX ***/
+    
+    .nav-item{
+        font-size: 20px;
+        margin-top: 10px;
+    }
+
+    .nav-item a{
+        color: #FFF;
+    }
+
+    .nav-item .bi{
+        margin-right: 10px;
+    }
+    
+
+    .titulo__chill-music{
+        margin-top: 10px;
+        margin-left: 20px;
+        display: flex;
+        justify-content: space-between;
+        text-decoration: none;
+        color: #FFF;
+        font-size: 28px;
+        text-transform: uppercase;
+    }
+
+    .titulo__chill-music:hover{
+        color: #FFF;
+    }
+    
+    .titulo__chill-music span{
+        align-self: center;
+        margin-left: 7%;
+    }
+    
+    .container__logo{
+        width: 100%;
+    }
+    
+    .logo__container{
+        min-width: 80px;
+        min-height: 80px;
+        width:5vw;
+        height: 10vh;
+        border-radius: 50%;
+        display: inline-block;
+        background-color:  #FFF;
+        background-image: url(../imagenes/logo_reproductor.png);
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: contain;
+    }
+    
+    .header_desktop{
+        display: none;
+    }
+
+    .main__index{
+        background: rgb(25,25,25);
+        background: linear-gradient(to top, rgba(25,25,25,1) 30%, rgba(145,36,36,1) 75%);
+        color: #FFF;
+    }
+    
+    .main__portada{
+        width: 100vw;
+        height: 300px;
+        display: flex;
+        flex-wrap: wrap;
+    }
+    
+    .portada__img{
+        margin-top: 4vh;
+        margin-left: 22vw;
+        width: 54%;
+        display:  inline-block;
+        box-shadow: 0px 4px 50px 22px rgba(0,0,0,0.9);
+        -webkit-box-shadow: 0px 4px 50px 22px rgba(0,0,0,0.9);
+        -moz-box-shadow: 0px 4px 50px 22px rgba(0,0,0,0.9);
+    }
+
+    .portada__text{
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center;
+        margin-left: 5vw;
+        position: relative;
+    }
+    
+    .titulo__portada{
+        width: 100%;
+        font-size: 3em;
+        font-weight: 900;
+        margin: 0;
+        margin-top: 2vh;
+    }
+    
+    .descripcion__portada{
+        width: 100%;
+        font-size: 1em;
+        font-weight: 500;
+        margin: 0;
+        line-height: 50px;
+        
+    }
+    
+    .duracion__portada{
+        width: 100%;
+        font-size:  1em;
+        font-weight: 400;
+        margin:0;
+        line-height: 50px;
+    }
+    
+    .btn__play{
+        width: 70px;
+        height: 70px;
+        border-radius: 50%;
+        background-color: #3aa419;
+        border: none
+    }
+    
+    .btn__play .bi-play-fill{
+        font-size: 40px;
+        line-height: 50px;
+    }
+    
+    .btn__like{
+        background-color: transparent;
+        border: none;
+    }
+    
+    .heart-album{
+        position: relative;
+        bottom: 15px;
+    }
+    
+    .btn__like .bi-heart{
+        font-size: 50px;
+        color: #FFF;
+        line-height: 50px;
+    }
+    
+    .dropdown{
+        display: inline-block;
+    }
+    
+    .flex-btn{
+        display: flex;
+        width: 20%;
+        justify-content: space-evenly;
+        margin-top: 27vh;
+        margin-left: 11vw;
+    }
+    
+    .tablaCanciones{
+        width: 90%;
+        margin: auto;
+        margin-top: 5vh;
+    }
+    
+    .table-dark {
+        --bs-table-bg: transparent;
+        --bs-table-striped-bg: #2c3034;
+        --bs-table-striped-color: #fff;
+        --bs-table-active-bg: #373b3e;
+        --bs-table-active-color: #fff;
+        --bs-table-hover-bg: rgba(255,255,255,0.1);
+        --bs-table-hover-color: #fff;
+        color: #fff;
+        border-color: #373b3e;
+      }
+    
+    .small{
+        position: relative;
+    }
+    
+    .titulo-cancion{
+        display: inline-block;
+        line-height: 0;
+    }
+    
+    .cantante-cancion{
+        line-height: 0;
+        font-size: 12px;
+        color: #c9c9c9
+    }
+    
+    .titulo-nombre-container{
+        display: inline-block;
+        margin-left: 0.5vw;
+    }
+    
+    .titulo-flex{
+        height: 40px;
+        display: flex;
+        flex-direction: column;
+        justify-content: end;
+    }
+    
+    .titulo-container{
+        display: flex;
+    }
+
+    #col-fecha{
+        display: none;
+    }
+    .col-fecha{
+        display: none;
+    }
+    
+    .grid-footer{
+        display: grid;
+        grid-template-columns: 72% 23%;
+        grid-template-rows: auto auto;
+        margin-top: 5vh;
+        margin-bottom: 13vh;
+    }
+    
+    .flex-menu-1{
+        display: flex;
+        justify-content: space-around;
+        height: 300px;
+    }
+    
+    .flex-contactos{
+        display: flex;
+        flex-direction: column;
+        font-size: 36px;
+        margin-top: 2vh;
+        position: relative;
+        left: 50px;
+        bottom: 20px;
+    }
+    
+    .flex-contactos div{
+        width: 65px;
+        height: 65px;
+        background-color: #2c3034; 
+        margin-right: 10px;
+        border-radius: 50%;
+    }
+    
+    .instagram, .twitter, .facebook{
+        min-width: 65px;
+        min-height: 65px;
+        margin-top: 20px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        color: #FFF;
+        transition: all 1s;
+    }
+    
+    .instagram:hover, .twitter:hover, .facebook:hover{
+        color: #de4c8a;
+    }
+    
+    .menu-1-titulos{
+        font-size: 1em;
+    }
+    
+    .flex-menu-1 ul li a{
+        color: #fff;
+        font-size: 1em;
+        transition: all 1s;
+    }
+    
+    .flex-menu-1 ul li a:hover{
+        color: #de4c8a;
+    }
+    
+    .flex-menu-1 ul li{
+        margin-top: 2vh;
+    }
+    
+    .flex-menu-2{
+        width: 100%;
+        margin-left: 0.8vw;
+    }
+    
+    .flex-menu-2 ul li{
+        display: inline-block;
+        margin-top: 10px;
+    }
+    
+    .flex-menu-2__ul{
+        display: flex;
+        flex-direction: column;
+        margin-left: 3vw;
+        justify-content: space-around;
+    }
+    
+    .flex-menu-2 ul li a{
+        color: #FFF;
+        font-size: 16px;
+        transition: all 1s;
+    }
+    
+    .flex-menu-2 ul li a:hover{
+        color: #de4c8a;
+    }
+    
+    .copyright{
+        position: relative;
+        top: 65%;
+        font-size: 18px;
+        margin-top: 3vh;
+    }
+    
+    /*** MALA CONDUCTA ***/
+    
+    .grid-reproductor-item{
+        position: absolute;
+        top: calc(100vh - 100px);
+    }
+    .grid-reproductor{
+        position: fixed;
+        width: 100%;
+        height: 100px;
+        background-color: rgba(25,25,25,1);
+        border-top: 1px solid #FFF;
+    }
+    
+    .barra-reproduccion{
+        display: flex;
+        justify-content: center;
+        margin-left: vw;
+    }
+    
+    .cancion-reproduccion{
+        margin-left: calc(48vw - 300px);
+        align-self: center;
+        margin-bottom: 20px;
+    }
+    
+    .instalar-app{
+        position: absolute;
+        top:75% !important;
+    }
+    
+    .titulo-reproduccion{
+        width: 100%;
+        height: 100%;
+        display: flex;
+        margin-left: 2vw;
+        margin-top: 1vh;
+    }
+    
+    .titulo-img-reproduccion{
+        height: 70px;
+        margin-top: 22px;
+    }
+    
+    .titulo-cancion-reproduccion{
+        height: 50px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+        align-self: center;
+        margin-left: 10px;
+    }
+    
+    .titulo-nombre-reproduccion{
+        color: #FFF;
+        font-size: 16px;
+        display: inline-block;
+        line-height: 0px;
+    }
+    
+    .titulo-cantante-reproduccion{
+        color: #FFF;
+        font-size: 12px;
+        display: inline-block;
+        line-height: 0px;
+    }
+    
+    .btn-fav{
+        display: flex;
+        margin-bottom: 20px;
+        margin-left: 15px;
+    }
+    
+    /*** HEART ***/
+    
+    [id="heart1"] {
+        position: absolute;
+        left: -100vw;
+    }
+      
+    [for="heart1"] {
+        color: #FFF;
+        cursor: pointer;
+        font-size: 5em;
+        align-self: center;  
+        transition: color 0.2s ease-in-out;
+    }
+      
+    [for="heart1"]:hover {
+        color: grey ;
+    }
+      
+    [for="heart1"]::selection {
+        color: none;
+        background: transparent;
+    }
+      
+    [for="heart1"]::moz-selection {
+        color: none;
+        background: transparent;
+    }
+      
+    
+    [id="heart1"]:checked + label {
+        color: rgb(0, 204, 255);
+        will-change: font-size;
+        animation: heart 1s cubic-bezier(.17, .89, .32, 1.49);
+    }
+    
+    [id="heart2"] {
+        position: absolute;
+        left: -100vw;
+    }
+      
+    [for="heart2"] {
+        color: #FFF;
+        cursor: pointer;
+        font-size: 3em;
+        align-self: center;  
+        transition: color 0.2s ease-in-out;
+    }
+      
+    [for="heart2"]:hover {
+        color: grey ;
+    }
+      
+    [for="heart2"]::selection {
+        color: none;
+        background: transparent;
+    }
+      
+    [for="heart2"]::moz-selection {
+        color: none;
+        background: transparent;
+    }
+    
+    [id="heart2"]:checked + label {
+        color: #e2264d;
+        will-change: font-size;
+        animation: heart 1s cubic-bezier(.17, .89, .32, 1.49);
+    }
+    
+    @keyframes heart {0%, 17.5% {font-size: 0;}}
+}
