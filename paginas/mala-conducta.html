@@ -117,14 +117,14 @@
                 <tr>
                     <th scope="col">#</th>
                     <th scope="col">TÍTULO</th>
-                    <th scope="col">ÁLBUM</th>
+                    <th scope="col" id="col-album">ÁLBUM</th>
                     <th scope="col" id="col-fecha">FECHA DE INCORPORACIÓN</th>
                     <th scope="col"><i class="bi bi-clock"></i></th>
                 </tr>
                 </thead>
                 <tbody>
                 
-                    <tr onclick="location.href='../paginas/mala-conducta.html'">
+                    <tr onclick="location.href='./mala-conducta.html'">
                         <th scope="row">1</th>
                         <td>
                             <div class="titulo-container">
@@ -139,12 +139,12 @@
                                 </div>
                             </div>
                         </td>
-                        <td>Mala Conducta</td>
+                        <td class="col-album">Mala Conducta</td>
                         <td class="col-fecha">2019</td>
                         <td>0:50</td>
                     </tr>
                 
-                <tr>
+                <tr onclick="location.href='./nos-volvemos-a-caer.html'">
                     <th scope="row">2</th>
                     <td>
                         <div class="titulo-container">
@@ -159,11 +159,11 @@
                             </div>
                         </div>
                     </td>
-                    <td>Mala Conducta</td>
+                    <td class="col-album">Mala Conducta</td>
                     <td class="col-fecha">2019</td>
                     <td>3:16</td>
                 </tr>
-                <tr>
+                <tr onclick="location.href='./y-ahora-vienes-a-mi.html'">
                     <th scope="row">3</th>
                     <td>
                             <div class="titulo-container">
@@ -178,11 +178,11 @@
                                 </div>
                             </div>
                     </td>
-                    <td>Mala Conducta</td>
+                    <td class="col-album">Mala Conducta</td>
                     <td class="col-fecha" >2019</td>
                     <td>3:25</td>
                 </tr>
-                <tr>
+                <tr onclick="location.href='./amor-de-su-cama.html'">
                     <th scope="row">4</th>
                     <td>
                             <div class="titulo-container">
@@ -197,11 +197,11 @@
                                 </div>
                             </div>
                     </td>
-                    <td>Animate</td>
+                    <td class="col-album">Animate</td>
                     <td class="col-fecha" >2018</td>
                     <td>2:53</td>
                 </tr>
-                <tr>
+                <tr onclick="location.href='./me-duele-su-nombre.html'">
                     <th scope="row">5</th>
                     <td>
                             <div class="titulo-container">
@@ -216,11 +216,11 @@
                                 </div>
                             </div>
                     </td>
-                    <td>Animate</td>
+                    <td class="col-album">Animate</td>
                     <td class="col-fecha" >2018</td>
                     <td>4:02</td>
                 </tr>
-                <tr>
+                <tr onclick="location.href='./maldita-mentirosa.html'">
                     <th scope="row">6</th>
                     <td>
                             <div class="titulo-container">
@@ -235,7 +235,7 @@
                                 </div>
                             </div>
                     </td>
-                    <td>Animate</td>
+                    <td class="col-album">Animate</td>
                     <td class="col-fecha">2018</td>
                     <td>3:26</td>
                 </tr>
@@ -308,12 +308,9 @@
         </div>   
     </div>
 
-    <!-- Conexion de jquery -->
-    <script src="../node_modules/jquery/dist/jquery.js"></script>
     <!-- Conexión de popper -->
     <script src="../node_modules/popper.js/dist/umd/popper.js"></script>
     <!-- Conexión js de bootstrap -->
-    <script src="../node_modules/bootstrap/dist/js/bootstrap.bundle.js"></script>
     <script src="../node_modules/bootstrap/dist/js/bootstrap.js"></script>
 </body>
 </html>

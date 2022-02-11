@@ -1123,7 +1123,7 @@ a{
     
     .portada__img{
         margin-top: 4vh;
-        margin-left: 22vw;
+        margin-left: 11.5vw;
         width: 54%;
         display:  inline-block;
         box-shadow: 0px 4px 50px 22px rgba(0,0,0,0.9);
@@ -1136,7 +1136,7 @@ a{
         flex-direction: row;
         flex-wrap: wrap;
         justify-content: center;
-        margin-left: 5vw;
+        margin-left: 8vw;
         position: relative;
     }
     
@@ -1153,6 +1153,7 @@ a{
         font-size: 1em;
         font-weight: 500;
         margin: 0;
+        margin-left: 3vw;
         line-height: 50px;
         
     }
@@ -1162,6 +1163,7 @@ a{
         font-size:  1em;
         font-weight: 400;
         margin:0;
+        margin-left: 3vw;
         line-height: 50px;
     }
     
@@ -1203,13 +1205,13 @@ a{
         width: 20%;
         justify-content: space-evenly;
         margin-top: 27vh;
-        margin-left: 11vw;
+        margin-left: 22vw;
     }
     
     .tablaCanciones{
         width: 90%;
         margin: auto;
-        margin-top: 5vh;
+        margin-top: 0;
     }
     
     .table-dark {
@@ -1222,6 +1224,13 @@ a{
         --bs-table-hover-color: #fff;
         color: #fff;
         border-color: #373b3e;
+      }
+
+      #col-album{
+          display: none;
+      }
+      .col-album{
+          display: none;
       }
     
     .small{
@@ -1272,8 +1281,9 @@ a{
     
     .flex-menu-1{
         display: flex;
+        flex-direction: column;
         justify-content: space-around;
-        height: 300px;
+        margin-left: 20px;
     }
     
     .flex-contactos{
@@ -1282,7 +1292,6 @@ a{
         font-size: 36px;
         margin-top: 2vh;
         position: relative;
-        left: 50px;
         bottom: 20px;
     }
     
@@ -1329,7 +1338,8 @@ a{
     
     .flex-menu-2{
         width: 100%;
-        margin-left: 0.8vw;
+        margin-top: 10px;
+        margin-left: 10px;
     }
     
     .flex-menu-2 ul li{
@@ -1356,7 +1366,8 @@ a{
     
     .copyright{
         position: relative;
-        top: 65%;
+        top: 50%;
+        right: 20px;
         font-size: 18px;
         margin-top: 3vh;
     }
@@ -1378,7 +1389,8 @@ a{
     .barra-reproduccion{
         display: flex;
         justify-content: center;
-        margin-left: vw;
+        margin-left: 38vw;
+        width: 30px;
     }
     
     .cancion-reproduccion{
@@ -1432,6 +1444,7 @@ a{
         display: flex;
         margin-bottom: 20px;
         margin-left: 15px;
+        display: none;
     }
     
     /*** HEART ***/
